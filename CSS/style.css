@@ -1,58 +1,96 @@
 :root {
-    /* Cores base */
     --color-white: #ffffff;
-    --color-gray-50: #231a1a;
 
-    --color-text-primary: var(--color-gray-50);
+    /* Tons base marrom‑dourados (mesma família de #B7975E) */
+    --brown-900: #3F2F16;
+    --brown-800: #6E5328;
+    --brown-700: #8F6F3A;
+    --brown-600: #A3804A;
+    --brown-500: #B18C53;
+    --brown-400: #C8A974;
+    --brown-300: #D8BE8F;
+    --brown-200: #E6D4B2;
+    --brown-100: #F2E7CE;
+    --brown-50: #FBF6EA;
+
+    --gold-600: #B7975E;
+    --gold-500: #CCA76E;
+    --gold-400: #E0C488;
+
+    --color-bg: var(--brown-50);
+    --color-text-primary: var(--brown-900);
 }
 
 * {
     margin: 0;
     padding: 0;
-    /*border: 1px solid black;*/
-    /*box-sizing: border-box;*/
     font-family: 'JetBrains Mono', sans-serif;
 }
 
 body {
-    /*color: var(--color-text-primary);*/
-    background-color: var(--color-white);
+    color: var(--color-text-primary);
+    background-color: var(--color-bg);
     line-height: 1.5;
 }
 
-/*.container {*/
-/*    max-width: 80rem; !* 1280px *!*/
-/*    margin-left: auto;*/
-/*    margin-right: auto;*/
-/*    padding-left: 2rem;*/
-/*    padding-right: 2rem;*/
-/*}*/
+.header {
+    position: sticky;
+    top: 0;
+    background-color: var(--brown-900);
+    color: var(--color-white);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+    z-index: 1000;
+    padding: 1rem 1.5rem;
+    font-size: 1.1rem;
+}
+
 
 .conteudo-header {
     display: flex;
     padding: 0.5rem;
     justify-content: space-between;
+    align-items: center;
 }
 
 .navegacao {
     display: flex;
     gap: 1rem;
+    align-items: center;
+}
+
+.navegacao a {
+    color: var(--color-white);
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.4rem 0.6rem;
+    border-radius: 0.375rem;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.navegacao a:hover,
+.navegacao a:focus {
+    background-color: rgba(255, 255, 255, 0.12);
+    outline: none;
 }
 
 .banner {
-    background-image: url(../Images/banner-fallout.jpg);
+    background-image: linear-gradient(to bottom right, rgba(0,0,0,0.45), rgba(0,0,0,0.2)), url(../Images/banner-fallout.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: bottom;
-    border: 2px solid black;
-
+    border: 2px solid var(--brown-800);
+    border-right-width: 0;
+    border-left-width: 0;
 }
 
 .banner h1 {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    text-shadow: white 2px 3px;
+    color: #ffffff;
+    font-weight: 800;
+    font-size: 3rem;
+    text-shadow: 0 8px 30px rgba(0,0,0,0.45), 0 2px 8px rgba(0,0,0,0.6);
     margin-left: 15rem;
 }
 
@@ -61,19 +99,51 @@ body {
 }
 
 .conteudo {
-    margin: 2rem 0;
+    margin: 2rem auto;
+    padding: 2rem 2.5rem;
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    max-width: 1100px;
+    background: var(--brown-100);
+    border: 1px solid var(--brown-300);
+    border-radius: 0.75rem;
+    box-shadow: 0 6px 24px rgba(63, 47, 22, 0.08);
 }
 
-.conteudo p, h2 {
+.conteudo p, .conteudo h2 {
     text-align: center;
-    padding: 0.5rem;
+    padding: 0.5rem 0;
+}
+
+.conteudo h2 {
+    font-size: 2rem;
+    line-height: 1.2;
+    color: var(--brown-900);
+}
+
+.conteudo p {
+    font-size: 1.1rem;
+    line-height: 1.75;
+    color: var(--brown-800);
+    max-width: 70ch;
+    margin: 0 auto;
 }
 
 .ranking {
-    border: 2px solid black;
+    border: 2px solid var(--brown-800);
+    border-right-width: 0;
+    border-left-width: 0;
+}
+
+.ranking h2 {
+    text-align: center;
+    margin-top: 0.5rem;
+    padding: 0.5rem 0;
+    color: var(--brown-800);
+    font-size: 2rem;
+    line-height: 1.2;
+    font-weight: 700;
 }
 
 .ranking__container {
@@ -93,7 +163,7 @@ body {
     overflow: hidden;
     align-items: stretch;
     flex: 1;
-    border: 1px solid black;
+    border: 1px solid var(--brown-400);
 }
 
 .jogo__img img {
@@ -116,6 +186,7 @@ body {
 .info__extra {
     display: flex;
     justify-content: space-between;
+    font-size: 1rem;
 }
 
 .ranking__botao {
@@ -126,25 +197,26 @@ body {
 }
 
 .botao__ranking {
-    background-color: #231a1a;
-    color: #ffffff;
+    background-color: var(--brown-800);
+    color: white;
     display: inline-block;
     padding: 0.6rem 1rem;
     border-radius: 0.5rem;
     border: none;
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 700;
     cursor: pointer;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.12), 0 2px 6px rgba(0,0,0,0.08);
+    margin-top: 0.5rem;
 }
 
-.botao__ranking:hover,
-.botao__ranking:focus {
-    background-color: #3a2b2b;
+.botao__ranking:hover {
+    background-color: var(--brown-900);
     outline: none;
 }
 
 .footer {
-    background-color: #231a1a;
+    background-color: var(--brown-900);
     min-height: 25vh;
     color: white;
 }
@@ -175,8 +247,8 @@ body {
     height: 4rem;
 }
 
-.footer span, ul, a {
-    color: gray;
+.footer span, .footer ul, .footer a {
+    color: var(--brown-200);
 }
 
 .footer ul {
@@ -187,7 +259,41 @@ body {
     text-decoration: none;
 }
 
+.container__jogo:hover {
+    box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+    border-color: var(--brown-500);
+}
+
+.fa-star,
+.fa-trophy {
+    color: var(--gold-500);
+}
+
+.footer hr {
+    border: 0;
+    border-top: 1px solid var(--brown-400);
+    opacity: 0.5;
+    margin: 0;
+}
+
 @media (min-width: 1200px) {
+    .jogo__info {
+        font-size: 1.5rem;
+        margin: 1rem 0.5rem;
+    }
+
+    .ranking__container {
+        gap: 2rem;
+        margin: 1rem 3rem;
+    }
+}
+
+@media (min-width: 1500px) {
+    .ranking__container {
+        gap: 5rem;
+        margin: 1rem 6rem;
+    }
+
     .jogo__info {
         font-size: 1.5rem;
         margin: 1rem 0.5rem;
@@ -204,6 +310,10 @@ body {
         font-size: 1.05rem;
     }
 
+    .info__extra {
+        font-size: 0.95rem;
+    }
+
     .ranking__container {
         gap: 0.3rem;
         margin: 1rem 0.3rem
@@ -215,9 +325,31 @@ body {
 }
 
 @media (max-width: 645px) {
+    .header {
+        position: static;
+        box-shadow: none;
+    }
+
+    .conteudo {
+        margin: 2rem 1rem;
+        padding: 1.25rem 1rem;
+        gap: 0.75rem;
+    }
+
+    .conteudo h2 {
+        font-size: 1.5rem;
+    }
+
+    .conteudo p {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
     .conteudo-header {
         display: flex;
         flex-direction: column;
+        padding: 0.75rem 1rem;
+        gap: 0.5rem;
     }
 
     .navegacao {
@@ -227,8 +359,12 @@ body {
         gap: 0.5rem;
     }
 
+    .navegacao a {
+        padding: 0;
+    }
+
     .banner, .banner h1 {
-        height: 150px;
+        height: 200px;
         font-size: 1rem;
     }
 
@@ -257,5 +393,3 @@ body {
         flex-direction: column;
     }
 }
-
-
