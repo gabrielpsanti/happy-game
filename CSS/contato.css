@@ -1,5 +1,3 @@
-/* Estilos específicos da página de Contato */
-
 .contato {
     display: grid;
     gap: 1rem;
@@ -17,7 +15,7 @@
 }
 
 .form__input, .form__textarea {
-    background: #fff;
+    background: white;
     color: var(--gray-900);
     border: 1px solid var(--gray-200);
     border-radius: 0.5rem;
@@ -55,10 +53,12 @@
 
 .botao-acao {
     background: var(--gray-800);
-    color: #fff;
+    color: white;
 }
 
-.botao-acao:hover { background: var(--gray-700); }
+.botao-acao:hover {
+    background: var(--gray-700);
+}
 
 .botao-voltar {
     background: var(--gray-50);
@@ -76,6 +76,11 @@
 }
 
 @media (max-width: 645px) {
-    .form__acoes { justify-content: stretch; }
-    .btn { width: 100%; justify-content: center; }
+    .form__acoes {
+        justify-content: stretch;
+    }
+
+    .btn {
+        width: 100%; justify-content: center;
+    }
 }
