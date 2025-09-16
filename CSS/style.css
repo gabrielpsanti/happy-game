@@ -11,6 +11,7 @@
     --gray-50: #F5F5F5;
 
     --gold-400: #EEC23BFF;
+    --gold-800: #EEC23B1E;
 
     --color-bg: #010b1f;
     --color-text-primary: #F3F3F3;
@@ -420,3 +421,4 @@ footer a:hover {
         flex-direction: column;
     }
 }
+
