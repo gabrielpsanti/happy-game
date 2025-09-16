@@ -1,0 +1,261 @@
+:root {
+    /* Cores base */
+    --color-white: #ffffff;
+    --color-gray-50: #231a1a;
+
+    --color-text-primary: var(--color-gray-50);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    /*border: 1px solid black;*/
+    /*box-sizing: border-box;*/
+    font-family: 'JetBrains Mono', sans-serif;
+}
+
+body {
+    /*color: var(--color-text-primary);*/
+    background-color: var(--color-white);
+    line-height: 1.5;
+}
+
+/*.container {*/
+/*    max-width: 80rem; !* 1280px *!*/
+/*    margin-left: auto;*/
+/*    margin-right: auto;*/
+/*    padding-left: 2rem;*/
+/*    padding-right: 2rem;*/
+/*}*/
+
+.conteudo-header {
+    display: flex;
+    padding: 0.5rem;
+    justify-content: space-between;
+}
+
+.navegacao {
+    display: flex;
+    gap: 1rem;
+}
+
+.banner {
+    background-image: url(../Images/banner-fallout.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    border: 2px solid black;
+
+}
+
+.banner h1 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-shadow: white 2px 3px;
+    margin-left: 15rem;
+}
+
+.banner, .banner h1 {
+    height: 400px;
+}
+
+.conteudo {
+    margin: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.conteudo p, h2 {
+    text-align: center;
+    padding: 0.5rem;
+}
+
+.ranking {
+    border: 2px solid black;
+}
+
+.ranking__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: 1rem;
+    margin: 1rem;
+}
+
+.container__jogo {
+    display: grid;
+    grid-template-rows: 2fr 1fr;
+    gap: 0;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    align-items: stretch;
+    flex: 1;
+    border: 1px solid black;
+}
+
+.jogo__img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+.jogo__info {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+    overflow: hidden;
+    justify-content: space-between;
+    font-size: 1.15rem;
+}
+
+.info__extra {
+    display: flex;
+    justify-content: space-between;
+}
+
+.ranking__botao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem;
+}
+
+.botao__ranking {
+    background-color: #231a1a;
+    color: #ffffff;
+    display: inline-block;
+    padding: 0.6rem 1rem;
+    border-radius: 0.5rem;
+    border: none;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.botao__ranking:hover,
+.botao__ranking:focus {
+    background-color: #3a2b2b;
+    outline: none;
+}
+
+.footer {
+    background-color: #231a1a;
+    min-height: 25vh;
+    color: white;
+}
+
+.footer__conteudo {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    padding: 2rem 4rem;
+}
+
+.footer__conteudo__container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-items: flex-start;
+}
+
+.footer__conteudo__container h2 {
+    padding: 0.5rem 0;
+}
+
+.footer__rodape {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 4rem;
+}
+
+.footer span, ul, a {
+    color: gray;
+}
+
+.footer ul {
+    list-style-type: none;
+}
+
+.footer a {
+    text-decoration: none;
+}
+
+@media (min-width: 1200px) {
+    .jogo__info {
+        font-size: 1.5rem;
+        margin: 1rem 0.5rem;
+    }
+}
+
+@media (max-width: 750px) {
+    .container__jogo {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .jogo__info {
+        font-size: 1.05rem;
+    }
+
+    .ranking__container {
+        gap: 0.3rem;
+        margin: 1rem 0.3rem
+    }
+
+    .botao__ranking {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 645px) {
+    .conteudo-header {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .navegacao {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+
+    .banner, .banner h1 {
+        height: 150px;
+        font-size: 1rem;
+    }
+
+    .banner h1 {
+        margin-left: 5rem;
+    }
+
+    .ranking__container {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        margin: 1rem 0.5rem;
+    }
+
+    .container__jogo {
+        display: grid;
+        grid-template-rows: 7fr 3fr;
+    }
+
+    .jogo__info {
+        font-size: 1rem;
+        margin: 1rem 0rem;
+    }
+
+    .footer__conteudo {
+        flex-direction: column;
+    }
+}
+
+
