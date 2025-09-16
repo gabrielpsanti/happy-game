@@ -5,8 +5,7 @@
 .cards {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
-    margin-top: 0.5rem;
+    gap: 3rem;
 }
 
 .card {
@@ -71,13 +70,13 @@
 
 @media (min-width: 1200px) {
     .cards {
-        gap: 1.5rem;
+        gap: 4rem;
     }
 }
 
 @media (max-width: 645px) {
     .cards {
-        gap: 1rem;
+        gap: 2rem;
     }
 
     .card__titulo {
