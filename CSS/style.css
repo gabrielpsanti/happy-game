@@ -1,24 +1,19 @@
 :root {
-    --color-white: #ffffff;
+    --gray-900: #1E1E1E;
+    --gray-800: #282828;
+    --gray-700: #333333;
+    --gray-600: #444444;
+    --gray-500: #5A5A5A;
+    --gray-400: #737373;
+    --gray-300: #9A9A9A;
+    --gray-200: #C5C5C5;
+    --gray-100: #E9E9E9;
+    --gray-50:  #F5F5F5;
 
-    /* Tons base marrom‑dourados (mesma família de #B7975E) */
-    --brown-900: #3F2F16;
-    --brown-800: #6E5328;
-    --brown-700: #8F6F3A;
-    --brown-600: #A3804A;
-    --brown-500: #B18C53;
-    --brown-400: #C8A974;
-    --brown-300: #D8BE8F;
-    --brown-200: #E6D4B2;
-    --brown-100: #F2E7CE;
-    --brown-50: #FBF6EA;
+    --gold-400: #EEC23BFF;
 
-    --gold-600: #B7975E;
-    --gold-500: #CCA76E;
-    --gold-400: #E0C488;
-
-    --color-bg: var(--brown-50);
-    --color-text-primary: var(--brown-900);
+    --color-bg: #161616;
+    --color-text-primary: #F3F3F3;
 }
 
 * {
@@ -36,8 +31,8 @@ body {
 .header {
     position: sticky;
     top: 0;
-    background-color: var(--brown-900);
-    color: var(--color-white);
+    background-color: var(--gray-900);
+    color: white;
     box-shadow: 0 2px 10px rgba(0,0,0,0.06);
     z-index: 1000;
     padding: 1rem 1.5rem;
@@ -59,7 +54,7 @@ body {
 }
 
 .navegacao a {
-    color: var(--color-white);
+    color: white;
     text-decoration: none;
     font-weight: 600;
     padding: 0.4rem 0.6rem;
@@ -67,18 +62,17 @@ body {
     transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-.navegacao a:hover,
-.navegacao a:focus {
+.navegacao a:hover, footer a:hover {
     background-color: rgba(255, 255, 255, 0.12);
     outline: none;
 }
 
 .banner {
-    background-image: linear-gradient(to bottom right, rgba(0,0,0,0.45), rgba(0,0,0,0.2)), url(../Images/banner-fallout.jpg);
+    background-image: linear-gradient(to bottom right, rgba(0,0,0,0.45), rgba(0,0,0,0.2)), url(../Images/retro-banner.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: bottom;
-    border: 2px solid var(--brown-800);
+    border: 2px solid var(--gray-800);
     border-right-width: 0;
     border-left-width: 0;
 }
@@ -86,16 +80,17 @@ body {
 .banner h1 {
     display: flex;
     justify-content: flex-start;
-    align-items: center;
+    align-items: flex-start;
+    margin-top: 5rem;
     color: #ffffff;
     font-weight: 800;
     font-size: 3rem;
     text-shadow: 0 8px 30px rgba(0,0,0,0.45), 0 2px 8px rgba(0,0,0,0.6);
-    margin-left: 15rem;
+    margin-left: 10rem;
 }
 
 .banner, .banner h1 {
-    height: 400px;
+    height: 450px;
 }
 
 .conteudo {
@@ -104,11 +99,10 @@ body {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    max-width: 1100px;
-    background: var(--brown-100);
-    border: 1px solid var(--brown-300);
+    max-width: 900px;
+    background: white;
     border-radius: 0.75rem;
-    box-shadow: 0 6px 24px rgba(63, 47, 22, 0.08);
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.12);
 }
 
 .conteudo p, .conteudo h2 {
@@ -119,28 +113,29 @@ body {
 .conteudo h2 {
     font-size: 2rem;
     line-height: 1.2;
-    color: var(--brown-900);
+    color: var(--gray-900);
 }
 
 .conteudo p {
     font-size: 1.1rem;
     line-height: 1.75;
-    color: var(--brown-800);
+    color: var(--gray-800);
     max-width: 70ch;
     margin: 0 auto;
 }
 
 .ranking {
-    border: 2px solid var(--brown-800);
+    border: 2px solid var(--gray-800);
     border-right-width: 0;
     border-left-width: 0;
+    background-color: var(--gray-50);
 }
 
 .ranking h2 {
     text-align: center;
     margin-top: 0.5rem;
     padding: 0.5rem 0;
-    color: var(--brown-800);
+    color: var(--gray-900);
     font-size: 2rem;
     line-height: 1.2;
     font-weight: 700;
@@ -163,7 +158,11 @@ body {
     overflow: hidden;
     align-items: stretch;
     flex: 1;
-    border: 1px solid var(--brown-400);
+    border: 1px solid var(--gray-400);
+    color: var(--gray-900);
+    background-color: white;
+    cursor: pointer;
+    transition: box-shadow 0.2s ease, border-color 0.2s ease;
 }
 
 .jogo__img img {
@@ -197,7 +196,7 @@ body {
 }
 
 .botao__ranking {
-    background-color: var(--brown-800);
+    background-color: var(--gray-800);
     color: white;
     display: inline-block;
     padding: 0.6rem 1rem;
@@ -211,12 +210,12 @@ body {
 }
 
 .botao__ranking:hover {
-    background-color: var(--brown-900);
+    background-color:  var(--gray-700);
     outline: none;
 }
 
 .footer {
-    background-color: var(--brown-900);
+    background-color: var(--gray-900);
     min-height: 25vh;
     color: white;
 }
@@ -247,8 +246,12 @@ body {
     height: 4rem;
 }
 
+.footer__rodape span {
+    color: white !important;
+}
+
 .footer span, .footer ul, .footer a {
-    color: var(--brown-200);
+    color: var(--gray-200);
 }
 
 .footer ul {
@@ -261,17 +264,20 @@ body {
 
 .container__jogo:hover {
     box-shadow: 0 4px 14px rgba(0,0,0,0.08);
-    border-color: var(--brown-500);
+    border-color: var(--gray-500);
 }
 
-.fa-star,
 .fa-trophy {
-    color: var(--gold-500);
+    color: white;
+}
+
+.fa-star {
+    color: var(--gold-400);
 }
 
 .footer hr {
     border: 0;
-    border-top: 1px solid var(--brown-400);
+    border-top: 1px solid var(--gray-400);
     opacity: 0.5;
     margin: 0;
 }
@@ -300,7 +306,16 @@ body {
     }
 }
 
-@media (max-width: 750px) {
+@media (max-width: 770px) {
+    .banner h1 {
+        font-size: 2rem;
+        margin-top: 10rem;
+    }
+
+    .conteudo {
+        margin: 2rem 1rem;
+    }
+
     .container__jogo {
         display: grid;
         grid-template-rows: 1fr 1fr;
@@ -364,12 +379,13 @@ body {
     }
 
     .banner, .banner h1 {
-        height: 200px;
+        height: 225px;
         font-size: 1rem;
     }
 
     .banner h1 {
-        margin-left: 5rem;
+        margin-left: 6rem;
+        margin-top: 4rem;
     }
 
     .ranking__container {
