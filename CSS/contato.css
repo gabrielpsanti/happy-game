@@ -1,0 +1,81 @@
+/* Estilos específicos da página de Contato */
+
+.contato {
+    display: grid;
+    gap: 1rem;
+}
+
+.form__grupo {
+    display: grid;
+    gap: 0.35rem;
+}
+
+.form__label {
+    color: var(--gray-900);
+    font-weight: 700;
+    font-size: 0.95rem;
+}
+
+.form__input, .form__textarea {
+    background: #fff;
+    color: var(--gray-900);
+    border: 1px solid var(--gray-200);
+    border-radius: 0.5rem;
+    padding: 0.75rem 0.9rem;
+    outline: none;
+}
+
+.form__input:focus, .form__textarea:focus {
+    border-color: var(--gray-700);
+    box-shadow: 0 0 0 3px rgba(39, 48, 68, 0.15);
+}
+
+.form__textarea {
+    min-height: 140px;
+}
+
+.form__acoes {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.75rem;
+    margin-top: 0.5rem;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.65rem 1rem;
+    border-radius: 0.5rem;
+    font-weight: 700;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+}
+
+.botao-acao {
+    background: var(--gray-800);
+    color: #fff;
+}
+
+.botao-acao:hover { background: var(--gray-700); }
+
+.botao-voltar {
+    background: var(--gray-50);
+    color: var(--gray-900);
+    border: 1px solid var(--gray-200);
+}
+
+.sucesso__icone {
+    font-size: 2rem;
+    color: #22c55e;
+}
+
+.sucesso__mensagem {
+    color: var(--gray-800);
+}
+
+@media (max-width: 645px) {
+    .form__acoes { justify-content: stretch; }
+    .btn { width: 100%; justify-content: center; }
+}
