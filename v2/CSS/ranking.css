@@ -1,0 +1,101 @@
+.conteudo__ranking h2 {
+    color: var(--gray-900);
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.card {
+    display: grid;
+    background: #fff;
+    color: var(--gray-900);
+    border-radius: 0.75rem;
+    overflow: hidden;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.16);
+}
+
+.card__img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+.card__body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    padding: 0.9rem 1rem;
+}
+
+.card__titulo {
+    font-size: 1.15rem;
+}
+
+.card__meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.card__info {
+    display: flex;
+    flex-direction: column;
+}
+
+.card__publisher {
+    font-size: 0.95rem;
+    color: var(--gray-700);
+}
+
+.card__genero {
+    font-size: 0.95rem;
+    color: var(--gray-800);
+    margin-top: 0.15rem;
+}
+
+.card_posicao {
+    font-weight: 700;
+    font-size: 1.05rem;
+}
+
+.card:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.14);
+}
+
+@media (min-width: 1200px) {
+    .cards {
+        gap: 4rem;
+    }
+}
+
+@media (max-width: 645px) {
+    .cards {
+        gap: 2rem;
+    }
+
+    .card__titulo {
+        font-size: 1.05rem;
+    }
+
+    .card__meta, .card__genero {
+        font-size: 0.95rem;
+    }
+}
+
+.top1, .top2, .top3 {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-weight: 700;
+    font-size: 1.15rem;
+}
+
+.top1 .fa-medal { color: #D4AF37; }  /* Gold */
+.top2 .fa-medal { color: #C0C0C0; }  /* Silver */
+.top3 .fa-medal { color: #CD7F32; }  /* Bronze */
