@@ -21,6 +21,9 @@
     border-radius: 0.5rem;
     padding: 0.75rem 0.9rem;
     outline: none;
+    width: 100%;
+    max-width: 100%;
+    display: block;
 }
 
 .form__input:focus, .form__textarea:focus {
@@ -64,6 +67,21 @@
     background: var(--gray-50);
     color: var(--gray-900);
     border: 1px solid var(--gray-200);
+}
+
+/* Evita que o Bootstrap sobrescreva o hover/active deixando o botão branco */
+.btn.botao-voltar:hover,
+.btn.botao-voltar:focus-visible {
+    background: var(--gray-100);
+    color: var(--gray-50);
+    border-color: var(--gray-200);
+    text-decoration: none;
+}
+
+.btn.botao-voltar:active {
+    background: var(--gray-200);
+    color: white;
+    border-color: var(--gray-200);
 }
 
 .sucesso__icone {

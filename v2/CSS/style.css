@@ -23,6 +23,11 @@
     font-family: 'JetBrains Mono', sans-serif;
 }
 
+/* Ensure padding and borders are included in element total width to prevent overflow on small screens */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 body {
     color: var(--color-text-primary);
     background-color: var(--color-bg);
@@ -148,7 +153,10 @@ footer a:hover {
     padding: 0.5rem;
     overflow: hidden;
     justify-content: space-between;
-    font-size: 1.15rem;
+}
+
+.info__nome {
+    font-size: 1.25rem !important;
 }
 
 .info__extra {
