@@ -23,7 +23,6 @@
     font-family: 'JetBrains Mono', sans-serif;
 }
 
-/* Ensure padding and borders are included in element total width to prevent overflow on small screens */
 *, *::before, *::after {
     box-sizing: border-box;
 }

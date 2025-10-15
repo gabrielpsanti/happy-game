@@ -69,7 +69,6 @@
     border: 1px solid var(--gray-200);
 }
 
-/* Evita que o Bootstrap sobrescreva o hover/active deixando o botão branco */
 .btn.botao-voltar:hover,
 .btn.botao-voltar:focus-visible {
     background: var(--gray-100);
